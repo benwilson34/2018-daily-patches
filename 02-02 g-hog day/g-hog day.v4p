@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\Ben\Documents\vvvv x64 patches\my patches\2018 daily patches\02-02\g-hog day.v4p" scrollx="5715" scrolly="1770" systemname="g-hog day" filename="C:\Users\Ben\Documents\vvvv x64 patches\my patches\2018 daily patches\02-02\g-hog day.v4p">
+   <PATCH nodename="C:\Users\Ben\Documents\vvvv x64 patches\my patches\2018 daily patches\02-02 g-hog day\g-hog day.v4p" scrollx="5715" scrolly="1770" systemname="g-hog day" filename="C:\Users\Ben\Documents\vvvv x64 patches\my patches\2018 daily patches\02-02\g-hog day.v4p">
    <BOUNDS type="Window" left="6780" top="0" width="13710" height="11520">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -83,7 +83,7 @@
    </PIN>
    <PIN pinname="Output Y" visible="1">
    </PIN>
-   <PIN pinname="Spread Count" slicecount="1" values="59" visible="1">
+   <PIN pinname="Spread Count" slicecount="1" visible="1" values="59">
    </PIN>
    <PIN pinname="Input X" slicecount="1" values="0">
    </PIN>
@@ -993,9 +993,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="275">
-   <BOUNDS type="Box" left="8040" top="6930" width="795" height="240">
+   <BOUNDS type="Box" left="7875" top="5835" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="8040" top="6930" width="0" height="0">
+   <BOUNDS type="Node" left="7875" top="5835" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="300">
    </PIN>
@@ -1181,9 +1181,9 @@
    <LINK srcnodeid="285" srcpinname="Output" dstnodeid="281" dstpinname="Color">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="287">
-   <BOUNDS type="Box" left="16425" top="3150" width="480" height="480">
+   <BOUNDS type="Box" left="16575" top="3150" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="16425" top="3150" width="0" height="0">
+   <BOUNDS type="Node" left="16575" top="3150" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -1255,9 +1255,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="295">
-   <BOUNDS type="Box" left="15120" top="4095" width="480" height="480">
+   <BOUNDS type="Box" left="15315" top="3900" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="15120" top="4095" width="0" height="0">
+   <BOUNDS type="Node" left="15315" top="3900" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -1295,7 +1295,7 @@
    <LINK srcnodeid="296" srcpinname="Output" dstnodeid="225" dstpinname="Initial Longitude">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="297">
-   <BOUNDS type="Box" left="16455" top="3855" width="480" height="480">
+   <BOUNDS type="Box" left="16455" top="3855" width="420" height="480">
    </BOUNDS>
    <BOUNDS type="Node" left="16455" top="3855" width="0" height="0">
    </BOUNDS>
@@ -1310,6 +1310,8 @@
    <PIN pinname="Behavior" slicecount="1" values="Bang">
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|reset cam|">
    </PIN>
    </NODE>
    <LINK srcnodeid="297" srcpinname="Y Output Value" dstnodeid="294" dstpinname="Reset">
