@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\Ben\Documents\vvvv x64 patches\my patches\2018 daily patches\02-11 tesse\tesse 2-curve.v4p" systemname="tesse 2-curve" filename="C:\Users\Ben\Documents\vvvv x64 patches\my patches\2018 daily patches\02-11 tesse\tesse 2-curve.v4p">
-   <BOUNDS type="Window" left="6450" top="0" width="14040" height="11520">
+   <PATCH nodename="C:\Users\Ben\Documents\vvvv x64 patches\2018 daily patches\02-12 tesse 2\tesse 2-curve.v4p" systemname="tesse 2-curve" filename="C:\Users\Ben\Documents\vvvv x64 patches\my patches\2018 daily patches\02-11 tesse\tesse 2-curve.v4p">
+   <BOUNDS type="Window" left="13980" top="3285" width="14040" height="11520">
    </BOUNDS>
    <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="0">
    <BOUNDS type="Node" left="7845" top="5205" width="100" height="100">
@@ -527,7 +527,7 @@
    </PIN>
    <PIN pinname="Position Out" visible="1">
    </PIN>
-   <PIN pinname="FilterTime" slicecount="1" values="0.8">
+   <PIN pinname="FilterTime" slicecount="1" values="3">
    </PIN>
    </NODE>
    <LINK srcnodeid="209" srcpinname="Position Out" dstnodeid="176" dstpinname="XY">
