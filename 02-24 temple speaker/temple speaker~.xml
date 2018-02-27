@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\Ben\Documents\vvvv x64 patches\my patches\2018 daily patches\02-24 temple speaker\temple speaker.v4p" systemname="temple speaker" filename="C:\Users\Ben\Documents\vvvv x64 patches\my patches\2018 daily patches\02-24\temple speaker.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Ben\Documents\vvvv x64 patches\my patches\2018 daily patches\02-24\temple speaker.v4p" systemname="temple speaker" filename="C:\Users\Ben\Documents\vvvv x64 patches\my patches\2018 daily patches\02-24\temple speaker.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="6450" top="0" width="14040" height="11520">
    </BOUNDS>
    <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="0">
@@ -148,6 +148,18 @@
    </LINK>
    <LINK srcnodeid="504" srcpinname="Output" dstnodeid="502" dstpinname="Texture">
    </LINK>
+   <NODE id="621" nodename="Ortho (Transform)" systemname="Ortho (Transform)">
+   <BOUNDS height="0" left="1290" top="3330" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Near Plane" visible="1" slicecount="1" values="-0.41111">
+   </PIN>
+   <PIN pinname="Far Plane" slicecount="1" visible="1" values="0.00000">
+   </PIN>
+   <PIN pinname="Transform In" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
    <NODE id="620" nodename="Box (EX9.Geometry)" systemname="Box (EX9.Geometry)">
    <BOUNDS height="0" left="1170" top="9180" type="Node" width="0">
    </BOUNDS>
@@ -163,13 +175,13 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="0.1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="0.08">
    </PIN>
    <PIN pinname="Z" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="X" slicecount="1" values="0">
+   <PIN pinname="X" slicecount="1" values="-0.04">
    </PIN>
    </NODE>
    <NODE id="609" nodename=":EFFECTS:\FlatDirectional.fx" systemname="FlatDirectional (EX9.Effect)" filename="%VVVV%\lib\nodes\effects\FlatDirectional.fx">
@@ -183,15 +195,13 @@
    </PIN>
    <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Ambient Color" slicecount="1" visible="1" values="|0.28552,0.05710,0.07674,1.00000|">
+   <PIN pinname="Ambient Color" slicecount="1" visible="1" values="|0.63233,0.16749,0.12646,1.00000|">
    </PIN>
-   <PIN pinname="Diffuse Color" slicecount="1" visible="1" values="|0.03677,0.11685,0.18383,1.00000|">
+   <PIN pinname="Diffuse Color" slicecount="1" visible="1" values="|0.06076,0.27641,0.30378,1.00000|">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
    <PIN pinname="Power" slicecount="1" values="50">
-   </PIN>
-   <PIN pinname="Specular Color" slicecount="1" values="|0.53253,0.53253,0.53253,1.00000|">
    </PIN>
    </NODE>
    <LINK dstnodeid="609" dstpinname="Mesh" linkstyle="PolyLine" srcnodeid="620" srcpinname="Mesh">
@@ -201,6 +211,8 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="609" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="502" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 8">
    </LINK>
    <NODE systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" id="627">
    <BOUNDS type="Node" left="1740" top="5250" width="100" height="100">
@@ -290,6 +302,12 @@
    <PIN pinname="Show Slider" slicecount="1" values="1">
    </PIN>
    </NODE>
+   <LINK srcnodeid="613" srcpinname="Y Output Value" dstnodeid="621" dstpinname="Near Plane">
+   </LINK>
+   <LINK srcnodeid="612" srcpinname="Y Output Value" dstnodeid="621" dstpinname="Far Plane" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="621" srcpinname="Transform Out" dstnodeid="627" dstpinname="Transform In">
+   </LINK>
    <LINK srcnodeid="614" srcpinname="Transform Out" dstnodeid="609" dstpinname="Transform">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="669" systemname="IOBox (Value Advanced)">
@@ -355,13 +373,13 @@
    </PIN>
    <PIN pinname="Yaw" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Pitch" slicecount="1" values="-0.29">
+   <PIN pinname="Pitch" slicecount="1" values="-0.31">
    </PIN>
    <PIN pinname="Roll" slicecount="1" values="0.1">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="-0.35">
+   <PIN pinname="TranslateX" slicecount="1" values="-0.33">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="0.3">
+   <PIN pinname="TranslateY" slicecount="1" values="0.09">
    </PIN>
    <PIN pinname="TranslateZ" slicecount="1" values="-0.79">
    </PIN>
@@ -405,11 +423,13 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Color" slicecount="1" values="|0.74707,0.74707,0.74707,1.00000|">
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
    </NODE>
+   <LINK srcnodeid="684" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 7">
+   </LINK>
    <NODE id="686" nodename="Ortho (Transform)" systemname="Ortho (Transform)">
    <BOUNDS height="0" left="5100" top="4950" type="Node" width="0">
    </BOUNDS>
@@ -429,7 +449,7 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="0.19">
+   <PIN pinname="Y" visible="1" slicecount="1" values="-0.18">
    </PIN>
    <PIN pinname="Z" slicecount="1" values="0.04">
    </PIN>
@@ -441,13 +461,15 @@
    <LINK srcnodeid="687" srcpinname="Transform Out" dstnodeid="684" dstpinname="Transform">
    </LINK>
    <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="688">
-   <BOUNDS type="Node" left="6060" top="6660" width="100" height="100">
+   <BOUNDS type="Node" left="6390" top="7095" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="temple_u.png">
+   <PIN pinname="Filename" slicecount="1" values="TempleOwls.png">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
+   <LINK srcnodeid="688" srcpinname="Texture Out" dstnodeid="684" dstpinname="Texture">
+   </LINK>
    <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="689">
    <BOUNDS type="Node" left="5235" top="6075" width="100" height="100">
    </BOUNDS>
@@ -455,7 +477,7 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="0.25">
+   <PIN pinname="TranslateX" slicecount="1" values="0.3">
    </PIN>
    <PIN pinname="Rotate" slicecount="1" values="0">
    </PIN>
@@ -463,9 +485,7 @@
    </PIN>
    <PIN pinname="ScaleX" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="TranslateZ" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="0.34">
+   <PIN pinname="TranslateZ" slicecount="1" values="-0.45">
    </PIN>
    </NODE>
    <LINK srcnodeid="689" srcpinname="Transform Out" dstnodeid="687" dstpinname="Transform In">
@@ -477,123 +497,11 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="XYZ" slicecount="1" values="1">
+   <PIN pinname="XYZ" slicecount="1" values="0.85">
    </PIN>
    </NODE>
    <LINK srcnodeid="686" srcpinname="Transform Out" dstnodeid="690" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="690" srcpinname="Transform Out" dstnodeid="689" dstpinname="Transform In">
-   </LINK>
-   <NODE id="621" nodename="Ortho (Transform OffCenter)" systemname="Ortho (Transform OffCenter)">
-   <BOUNDS height="0" left="1350" top="4185" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Near Plane" visible="1" slicecount="1" values="-0.41111">
-   </PIN>
-   <PIN pinname="Far Plane" slicecount="1" visible="1" values="0.00000">
-   </PIN>
-   <PIN pinname="Transform In" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Left" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Top" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Right" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Bottom" slicecount="1" values="-1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="613" srcpinname="Y Output Value" dstnodeid="621" dstpinname="Near Plane">
-   </LINK>
-   <LINK srcnodeid="612" srcpinname="Y Output Value" dstnodeid="621" dstpinname="Far Plane" linkstyle="PolyLine">
-   </LINK>
-   <LINK srcnodeid="621" srcpinname="Transform Out" dstnodeid="627" dstpinname="Transform In">
-   </LINK>
-   <NODE id="691" nodename="Rotate (Transform)" systemname="Rotate (Transform)">
-   <BOUNDS height="0" left="1110" top="3780" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Z" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="X" slicecount="1" values="-0.03">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="691" srcpinname="Transform Out" dstnodeid="621" dstpinname="Transform In">
-   </LINK>
-   <NODE systemname="Colorize (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Colorize\Colorize (EX9.Texture Filter).v4p" nodename="Colorize (EX9.Texture Filter)" componentmode="Hidden" id="692">
-   <BOUNDS type="Node" left="6045" top="7350" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="ColorA" slicecount="1" visible="1" values="|0.00000,0.00000,0.00000,0.00000|">
-   </PIN>
-   <PIN pinname="ColorB" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="ColorC" visible="1" slicecount="1" values="|0.00000,0.00000,0.00000,0.00000|">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="688" srcpinname="Texture Out" dstnodeid="692" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="692" srcpinname="Output" dstnodeid="684" dstpinname="Texture">
-   </LINK>
-   <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="693">
-   <BOUNDS type="Node" left="7020" top="6945" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Hue" slicecount="1" values="0.3333">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Alpha" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Value" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="693" srcpinname="Output" dstnodeid="692" dstpinname="ColorA">
-   </LINK>
-   <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="694">
-   <BOUNDS type="Node" left="2355" top="8655" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Hue" slicecount="1" values="0.26">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Alpha" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Value" slicecount="1" values="0.07">
-   </PIN>
-   <PIN pinname="Saturation" slicecount="1" values="0.31">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="694" srcpinname="Output" dstnodeid="609" dstpinname="Ambient Color">
-   </LINK>
-   <LINK srcnodeid="502" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 8">
-   </LINK>
-   <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="695">
-   <BOUNDS type="Node" left="4920" top="9045" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Hue" slicecount="1" values="0.17">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Alpha" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Saturation" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="695" srcpinname="Output" dstnodeid="671" dstpinname="Ambient Color">
    </LINK>
    </PATCH>
