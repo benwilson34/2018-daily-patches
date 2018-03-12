@@ -381,7 +381,7 @@
    <NODE systemname="line animation 3" filename="line animation 3.v4p" nodename="line animation 3.v4p" componentmode="InAWindow" id="753">
    <BOUNDS type="Node" left="1590" top="6045" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="1110" top="645" width="8445" height="10875">
+   <BOUNDS type="Window" left="1110" top="3405" width="7035" height="8115">
    </BOUNDS>
    <PIN pinname="input spread" visible="1" slicecount="2" values="0,0">
    </PIN>
@@ -569,7 +569,7 @@
    </PIN>
    <PIN pinname="Insert" visible="1" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Node" left="4095" top="5460" width="100" height="100">
+   <BOUNDS type="Node" left="4230" top="5505" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="2" values="-0.447368421052632,-0.413978494623656">
    </PIN>
@@ -617,20 +617,6 @@
    <LINK srcnodeid="668" srcpinname="Right Button" dstnodeid="776" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="776" srcpinname="Output" dstnodeid="772" dstpinname="Input">
-   </LINK>
-   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="777">
-   <BOUNDS type="Node" left="4905" top="5085" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="694" srcpinname="Output" dstnodeid="777" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="777" srcpinname="Output" dstnodeid="772" dstpinname="Insert">
    </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="778">
    <BOUNDS type="Node" left="5010" top="8250" width="100" height="100">
@@ -734,4 +720,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <LINK srcnodeid="694" srcpinname="Output" dstnodeid="772" dstpinname="Insert">
+   </LINK>
    </PATCH>
