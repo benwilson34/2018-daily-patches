@@ -1,0 +1,731 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
+   <PATCH nodename="C:\Users\Ben\Documents\vvvv x64 patches\2018 daily patches\04-07 floraflage orange\floraflage orange.v4p" systemname="floraflage orange" filename="C:\Users\Ben\Documents\vvvv x64 patches\2018 daily patches\04-07 floraflage orange\floraflage orange.v4p" scrollx="90" scrolly="645">
+   <BOUNDS type="Window" left="6345" top="3735" width="14955" height="11205">
+   </BOUNDS>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="0">
+   <BOUNDS type="Node" left="8880" top="5205" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8880" top="5205" width="5745" height="5745">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13560" top="90" width="15240" height="15510">
+   </BOUNDS>
+   <PIN pinname="View" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ratio" visible="1">
+   </PIN>
+   <PIN pinname="Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.95181,0.95181,0.95181,1.00000|">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D16">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="12615" top="4830" width="945" height="270">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Alignment" slicecount="1" values="FitIn">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Actual Backbuffer Width" dstnodeid="1" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Actual Backbuffer Height" dstnodeid="1" dstpinname="Aspect Height">
+   </LINK>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1875" top="10380" width="6180" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 8" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 6" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 7" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="0" dstpinname="Layers" linkstyle="VHV">
+   <LINKPOINT x="2910" y="10675">
+   </LINKPOINT>
+   <LINKPOINT x="7905" y="10565">
+   </LINKPOINT>
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <LINK srcnodeid="1" srcpinname="Transform Out" dstnodeid="0" dstpinname="Aspect Ratio">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="18">
+   <BOUNDS type="Node" left="9765" top="4785" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9765" top="4785" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1080">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Backbuffer Height">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Backbuffer Width">
+   </LINK>
+   <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="501">
+   <BOUNDS type="Node" left="7710" top="8865" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="..\sig-1.png">
+   </PIN>
+   <PIN pinname="Reload" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="502">
+   <BOUNDS type="Node" left="7350" top="9975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="503">
+   <BOUNDS type="Node" left="7515" top="9585" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="0.22">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="-0.86">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="0.79">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="0.41">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="503" srcpinname="Transform Out" dstnodeid="502" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="Invert (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Invert\Invert (EX9.Texture Filter).v4p" nodename="Invert (EX9.Texture Filter)" componentmode="Hidden" id="504">
+   <BOUNDS type="Node" left="7710" top="9225" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="501" srcpinname="Texture Out" dstnodeid="504" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="504" srcpinname="Output" dstnodeid="502" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="699">
+   <BOUNDS type="Node" left="8010" top="8520" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Value" slicecount="1" values="0.94">
+   </PIN>
+   <PIN pinname="Saturation" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Hue" slicecount="1" values="0.12">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="699" srcpinname="Output" dstnodeid="502" dstpinname="Color">
+   </LINK>
+   <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="792">
+   <BOUNDS type="Node" left="2415" top="8715" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="floraflage-orange__0001_yellow.png">
+   </PIN>
+   </NODE>
+   <NODE systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="793">
+   <BOUNDS type="Node" left="2400" top="9735" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Blend Mode" slicecount="1" values="Blend">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="799">
+   <BOUNDS type="Node" left="870" top="9030" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="floraflage-orange__0000_blue.png">
+   </PIN>
+   </NODE>
+   <NODE systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="798">
+   <BOUNDS type="Node" left="870" top="9750" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Blend Mode" slicecount="1" values="Blend">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="793" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 4">
+   </LINK>
+   <LINK srcnodeid="798" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 3">
+   </LINK>
+   <NODE id="802" componentmode="InABox" systemname="Renderer (EX9)" nodename="Renderer (EX9)" hiddenwhenlocked="0" managers="">
+   <PIN pinname="Layers" visible="1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1" pintype="Output">
+   </PIN>
+   <BOUNDS type="Node" left="4530" top="5520" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4530" top="5520" width="1500" height="1380">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="8760" width="6240" height="6510">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Tag" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" pintype="Configuration" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Fullscreen Format" pintype="Configuration" slicecount="1" values="X8R8G8B8">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" pintype="Configuration" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" pintype="Configuration" slicecount="1" values="AsDesktop">
+   </PIN>
+   <PIN pinname="Fullscreen Refresh Rate" pintype="Configuration" slicecount="1" values="AsDesktop">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" pintype="Configuration" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Backbuffer Count" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Fullscreen Swap Effect" pintype="Configuration" slicecount="1" values="discard">
+   </PIN>
+   <PIN pinname="Windowed Backbuffer Format" pintype="Configuration" slicecount="1" values="X8R8G8B8">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" pintype="Configuration" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" pintype="Configuration" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Windowed Backbuffer Count" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Swap Effect" pintype="Configuration" slicecount="1" values="discard">
+   </PIN>
+   <PIN pinname="Clip Device" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Presentation Interval" pintype="Configuration" slicecount="1" values="default">
+   </PIN>
+   <PIN pinname="Clear Depth Buffer" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Clear" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Background Color" pintype="Input" visible="1" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Backbuffer Width" pintype="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Backbuffer Height" pintype="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Fullscreen" pintype="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="View" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Projection" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Aspect Ratio" pintype="Input" visible="0" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Crop" pintype="Input" visible="-1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Viewport" pintype="Input" visible="-1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transformations Index" pintype="Input" visible="-1" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Window Handle" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="X" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Y" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Middle Button" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Right Button" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Is Fullscreen" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Width" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="810">
+   <BOUNDS type="Node" left="5190" top="5145" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5190" top="5145" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="512">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="810" srcpinname="Y Output Value" dstnodeid="802" dstpinname="Backbuffer Height">
+   </LINK>
+   <LINK srcnodeid="810" srcpinname="Y Output Value" dstnodeid="802" dstpinname="Backbuffer Width">
+   </LINK>
+   <NODE systemname="RotZoom (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\RotZoom\RotZoom (EX9.Texture Filter).v4p" nodename="RotZoom (EX9.Texture Filter)" componentmode="Hidden" id="814">
+   <BOUNDS type="Node" left="2580" top="9045" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Rotate" slicecount="1" values="0.25">
+   </PIN>
+   <PIN pinname="Scale" slicecount="2" values="1,1">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="819">
+   <BOUNDS type="Node" left="3960" top="8715" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="floraflage-orange__0002_green.png">
+   </PIN>
+   </NODE>
+   <NODE systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="818">
+   <BOUNDS type="Node" left="3945" top="9735" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Blend Mode" slicecount="1" values="Blend">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="RotZoom (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\RotZoom\RotZoom (EX9.Texture Filter).v4p" nodename="RotZoom (EX9.Texture Filter)" componentmode="Hidden" id="816">
+   <BOUNDS type="Node" left="4125" top="9045" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Rotate" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="823">
+   <BOUNDS type="Node" left="5715" top="8550" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="floraflage-orange__0003_pink.png">
+   </PIN>
+   </NODE>
+   <NODE systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="822">
+   <BOUNDS type="Node" left="5700" top="9570" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Blend Mode" slicecount="1" values="Blend">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="RotZoom (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\RotZoom\RotZoom (EX9.Texture Filter).v4p" nodename="RotZoom (EX9.Texture Filter)" componentmode="Hidden" id="820">
+   <BOUNDS type="Node" left="5880" top="8880" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Rotate" slicecount="1" values="0.75">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="822" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 6">
+   </LINK>
+   <LINK srcnodeid="818" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 5">
+   </LINK>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="828">
+   <BOUNDS type="Node" left="1935" top="3180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Cycles" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Change" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="829">
+   <BOUNDS type="Node" left="1935" top="3525" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="828" srcpinname="Output" dstnodeid="829" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="828" srcpinname="Cycles" dstnodeid="829" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Perlin (EX9.Texture Source)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Source\Perlin\Perlin (EX9.Texture Source).v4p" nodename="Perlin (EX9.Texture Source)" componentmode="Hidden" id="836">
+   <BOUNDS type="Node" left="3135" top="4425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Amplify" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Octaves" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Balance" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Format" slicecount="1" values="A8R8G8B8">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="512">
+   </PIN>
+   <PIN pinname="Height" slicecount="1" values="512">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="837">
+   <BOUNDS type="Node" left="4545" top="4845" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="837" srcpinname="Layer" dstnodeid="802" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="836" srcpinname="Output" dstnodeid="814" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="836" srcpinname="Output" dstnodeid="816" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="836" srcpinname="Output" dstnodeid="820" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="836" srcpinname="Output" dstnodeid="837" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="DistortWarp (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\DistortWarp\DistortWarp (EX9.Texture Filter).v4p" nodename="DistortWarp (EX9.Texture Filter)" componentmode="Hidden" id="817">
+   <BOUNDS type="Node" left="3945" top="9390" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Control" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Amount" slicecount="2" values="2.01,2.01">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="0.2">
+   </PIN>
+   <PIN pinname="Map Smooth" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Direction" visible="1">
+   </PIN>
+   <PIN pinname="Twirl" slicecount="1" values="0.1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="819" srcpinname="Texture Out" dstnodeid="817" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="817" srcpinname="Output" dstnodeid="818" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="816" srcpinname="Output" dstnodeid="817" dstpinname="Control">
+   </LINK>
+   <NODE systemname="DistortWarp (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\DistortWarp\DistortWarp (EX9.Texture Filter).v4p" nodename="DistortWarp (EX9.Texture Filter)" componentmode="Hidden" id="813">
+   <BOUNDS type="Node" left="2400" top="9390" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Control" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Amount" slicecount="2" values="2.01,2.01">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="0.2">
+   </PIN>
+   <PIN pinname="Map Smooth" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Direction" visible="1">
+   </PIN>
+   <PIN pinname="Twirl" slicecount="1" values="0.1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="792" srcpinname="Texture Out" dstnodeid="813" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="813" srcpinname="Output" dstnodeid="793" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="814" srcpinname="Output" dstnodeid="813" dstpinname="Control">
+   </LINK>
+   <NODE systemname="DistortWarp (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\DistortWarp\DistortWarp (EX9.Texture Filter).v4p" nodename="DistortWarp (EX9.Texture Filter)" componentmode="Hidden" id="812">
+   <BOUNDS type="Node" left="870" top="9390" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Control" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Amount" slicecount="2" values="2.01,2.01">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="0.2">
+   </PIN>
+   <PIN pinname="Map Smooth" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Direction" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Twirl" slicecount="1" values="0.1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="799" srcpinname="Texture Out" dstnodeid="812" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="812" srcpinname="Output" dstnodeid="798" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="836" srcpinname="Output" dstnodeid="812" dstpinname="Control">
+   </LINK>
+   <NODE systemname="DistortWarp (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\DistortWarp\DistortWarp (EX9.Texture Filter).v4p" nodename="DistortWarp (EX9.Texture Filter)" componentmode="Hidden" id="821">
+   <BOUNDS type="Node" left="5700" top="9225" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Control" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Amount" slicecount="2" values="2.01,2.01">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="0.2">
+   </PIN>
+   <PIN pinname="Map Smooth" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Direction" visible="1">
+   </PIN>
+   <PIN pinname="Twirl" slicecount="1" values="0.1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="823" srcpinname="Texture Out" dstnodeid="821" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="821" srcpinname="Output" dstnodeid="822" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="820" srcpinname="Output" dstnodeid="821" dstpinname="Control">
+   </LINK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="839">
+   <BOUNDS type="Node" left="975" top="8265" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" values="60">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="838">
+   <BOUNDS type="Node" left="960" top="7920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="838" srcpinname="Output" dstnodeid="839" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="839" srcpinname="Position Out" dstnodeid="812" dstpinname="Direction">
+   </LINK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="843">
+   <BOUNDS type="Node" left="2490" top="8280" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" values="45">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="842">
+   <BOUNDS type="Node" left="2475" top="7935" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="842" srcpinname="Output" dstnodeid="843" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="843" srcpinname="Position Out" dstnodeid="813" dstpinname="Direction">
+   </LINK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="846">
+   <BOUNDS type="Node" left="4110" top="8235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" values="30">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="845">
+   <BOUNDS type="Node" left="4095" top="7890" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="845" srcpinname="Output" dstnodeid="846" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="846" srcpinname="Position Out" dstnodeid="817" dstpinname="Direction">
+   </LINK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="849">
+   <BOUNDS type="Node" left="5775" top="7995" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" values="75">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="848">
+   <BOUNDS type="Node" left="5760" top="7650" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="848" srcpinname="Output" dstnodeid="849" dstpinname="Go To Position">
+   </LINK>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="847">
+   <BOUNDS type="Node" left="3015" top="7110" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Change" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="847" srcpinname="Change" dstnodeid="848" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="849" srcpinname="Position Out" dstnodeid="821" dstpinname="Direction">
+   </LINK>
+   <LINK srcnodeid="847" srcpinname="Change" dstnodeid="845" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="847" srcpinname="Change" dstnodeid="842" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="847" srcpinname="Change" dstnodeid="838" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="829" srcpinname="Output" dstnodeid="836" dstpinname="Y">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" id="850">
+   <BOUNDS type="Node" left="1425" top="7095" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleXY" slicecount="2" values="1.05,1.05">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="850" srcpinname="Transform Out" dstnodeid="798" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="850" srcpinname="Transform Out" dstnodeid="793" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="850" srcpinname="Transform Out" dstnodeid="818" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="850" srcpinname="Transform Out" dstnodeid="822" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="WaveShaper (Value)" nodename="WaveShaper (Value)" componentmode="Hidden" id="851">
+   <BOUNDS type="Node" left="3435" top="3720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" values="Sine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="828" srcpinname="Output" dstnodeid="851" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="852">
+   <BOUNDS type="Node" left="3435" top="4065" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="851" srcpinname="Output" dstnodeid="852" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="852" srcpinname="Output" dstnodeid="836" dstpinname="Z">
+   </LINK>
+   </PATCH>
